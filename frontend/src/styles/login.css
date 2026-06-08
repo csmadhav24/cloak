@@ -1,0 +1,415 @@
+/* src/styles/login.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background: #050816;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+/* Animated background blobs */
+
+.login-page::before,
+.login-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+}
+
+.login-page::before {
+  width: 400px;
+  height: 400px;
+  background: #00e5ff;
+  top: -100px;
+  left: -100px;
+  animation: floatBlob 12s infinite alternate;
+}
+
+.login-page::after {
+  width: 450px;
+  height: 450px;
+  background: #3b82f6;
+  bottom: -150px;
+  right: -100px;
+  animation: floatBlob 10s infinite alternate-reverse;
+}
+
+@keyframes floatBlob {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, 50px);
+  }
+}
+
+/* ==========================================
+   LEFT SIDE
+========================================== */
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cloak-container {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.cloak-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 8rem;
+  font-weight: 900;
+
+  color: white;
+  text-transform: uppercase;
+
+  gap: 0.1rem;
+
+  position: relative;
+
+  animation: logoGlow 1s ease forwards;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.cloak-title span {
+  opacity: 0;
+  display: inline-block;
+  animation-fill-mode: forwards;
+}
+
+/* C */
+
+.cloak-title span:nth-child(1) {
+  transform: translateX(-120px);
+  animation: slideLeft 0.8s ease forwards;
+}
+
+/* L */
+
+.cloak-title span:nth-child(2) {
+  transform: translateY(-120px);
+  animation: slideTop 0.8s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* O */
+
+.cloak-title span:nth-child(3) {
+  transform: scale(0);
+  animation: zoomIn 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* A */
+
+.cloak-title span:nth-child(4) {
+  transform: translateY(120px);
+  animation: slideBottom 0.8s ease forwards;
+  animation-delay: 0.45s;
+}
+
+/* K */
+
+.cloak-title span:nth-child(5) {
+  transform: translateX(120px);
+  animation: slideRight 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* Subtitle */
+
+.cloak-subtitle {
+  margin-top: 60px;
+
+  color: rgba(255,255,255,0.75);
+
+  letter-spacing: 0.4rem;
+
+  text-transform: uppercase;
+
+  font-size: 0.9rem;
+
+  opacity: 0;
+
+  animation: subtitleReveal 0.8s ease forwards;
+  animation-delay: 1.8s;
+}
+
+/* Animations */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideTop {
+  from {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideBottom {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes logoGlow {
+  0% {
+    text-shadow: none;
+  }
+
+  40% {
+    text-shadow:
+      0 0 25px rgba(0,229,255,0.9),
+      0 0 60px rgba(0,229,255,0.7),
+      0 0 120px rgba(59,130,246,0.5);
+  }
+
+  100% {
+    text-shadow:
+      0 0 12px rgba(0,229,255,0.35),
+      0 0 30px rgba(0,229,255,0.2);
+  }
+}
+
+@keyframes subtitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   FLOATING PARTICLES
+========================================== */
+
+.particle {
+  position: absolute;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+
+.right-panel {
+  width: 420px;
+  backdrop-filter: blur(30px);
+  background: rgba(255,255,255,0.04);
+  border-left: 1px solid rgba(255,255,255,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+  z-index: 2;
+}
+
+.login-box {
+  width: 100%;
+}
+
+.login-heading {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-input {
+  width: 100%;
+  height: 58px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.04);
+
+  color: white;
+
+  padding: 0 18px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all .3s;
+}
+
+.form-input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 0 4px rgba(0,229,255,.12);
+}
+
+.form-input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.error-box {
+  background: rgba(255,0,0,.08);
+  border: 1px solid rgba(255,0,0,.15);
+  color: #ff8b8b;
+
+  padding: 14px;
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 58px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #00e5ff,
+    #3b82f6
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all .3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(0,229,255,0.25);
+}
+
+.register-btn {
+  width: 100%;
+  height: 58px;
+
+  margin-top: 12px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.register-btn:hover {
+  background: rgba(255,255,255,.04);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    width: 100%;
+    border-left: none;
+  }
+
+}
