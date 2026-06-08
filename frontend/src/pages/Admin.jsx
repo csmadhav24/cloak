@@ -26,13 +26,13 @@ function Admin() {
 
     try {
       const [usersRes, statsRes, auditRes] = await Promise.all([
-        fetch('http://localhost:8000/api/admin/users', {
+        fetch('https://cloak-api-igkh.onrender.com/api/admin/users', {
           headers: { 'Authorization': `Bearer ${token}` }
         }),
-        fetch('http://localhost:8000/api/admin/stats', {
+        fetch('https://cloak-api-igkh.onrender.com/api/admin/stats', {
           headers: { 'Authorization': `Bearer ${token}` }
         }),
-        fetch('http://localhost:8000/api/audit/logs?page=1&page_size=20', {
+        fetch('https://cloak-api-igkh.onrender.com/api/audit/logs?page=1&page_size=20', {
           headers: { 'Authorization': `Bearer ${token}` }
         })
       ]);
@@ -53,7 +53,7 @@ function Admin() {
   const updateUserRole = async (userId, newRole) => {
     const token = localStorage.getItem('token');
     try {
-      await fetch(`http://localhost:8000/api/admin/users/${userId}`, {
+      await fetch(`https://cloak-api-igkh.onrender.com/api/admin/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -70,7 +70,7 @@ function Admin() {
   const toggleUserLock = async (userId, currentStatus) => {
     const token = localStorage.getItem('token');
     try {
-      await fetch(`http://localhost:8000/api/admin/users/${userId}`, {
+      await fetch(`https://cloak-api-igkh.onrender.com/api/admin/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
