@@ -9,6 +9,7 @@ import logging
 import os
 from contextlib import asynccontextmanager
 from datetime import datetime
+from sqlalchemy import select
 
 from app.config import settings
 from app.database.connection import engine, AsyncSessionLocal
