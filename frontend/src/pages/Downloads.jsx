@@ -14,7 +14,7 @@ function Downloads() {
   const fetchFiles = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/api/files/files', {
+      const response = await fetch('https://cloak-api-igkh.onrender.com/api/files/files', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -30,7 +30,7 @@ function Downloads() {
     setDownloading(fileId);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8000/api/files/download/${fileId}`, {
+      const response = await fetch(`https://cloak-api-igkh.onrender.com/api/files/download/${fileId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       
