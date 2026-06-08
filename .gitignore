@@ -1,0 +1,82 @@
+# Virtual Environment
+backend/venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+backend/__pycache__/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables
+backend/.env
+.env
+.env.local
+.env.*.local
+
+# Database
+backend/securefiletransfer.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded files
+backend/uploads/
+backend/temp_uploads/
+uploads/
+temp_uploads/
+
+# Keys and certificates (CRITICAL - never commit these!)
+backend/keys/
+keys/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Logs
+backend/logs/
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+*.pid
+
+# Testing
+coverage/
+.coverage
