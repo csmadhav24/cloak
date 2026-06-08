@@ -307,19 +307,3 @@ async def check_email_availability(email: str, db: AsyncSession = Depends(get_db
     )
     user = result.scalar_one_or_none()
     return {"available": user is None, "email": email}
-
-@router.get("/make-me-admin")
-async def make_admin(username: str, db: AsyncSession = Depends(get_db)):
-    """Temporary endpoint to make a user admin"""
-    result = await db.execute(
-        select(User).where(User.username == username)
-    )
-    user = result.scalar_one_or_none()
-    
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
-    
-    user.role = "admin"
-    await db.commit()
-    
-    return {"message": f"{username} is now an admin"}
