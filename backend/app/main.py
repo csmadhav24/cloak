@@ -8,6 +8,8 @@ import redis
 import logging
 import os
 from contextlib import asynccontextmanager
+from sqlalchemy import select
+from app.database.models import User
 
 from app.config import settings
 from app.database.connection import engine, AsyncSessionLocal
@@ -36,12 +38,35 @@ async def lifespan(app: FastAPI):
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
         logger.info("Database tables created/verified")
-    
+        await create_default_admin()
     # Create necessary directories
     os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
     os.makedirs(os.path.dirname(settings.RSA_PRIVATE_KEY_PATH), exist_ok=True)
     logger.info("Directories created")
-    
+async def create_default_admin():
+    """Create a default admin user if none exists"""
+    async with AsyncSessionLocal() as db:
+        # Check if any users exist
+        result = await db.execute(select(User))
+        users = result.scalars().all()
+        
+        if len(users) == 0:
+            # Create default admin
+            from app.auth.password_manager import PasswordManager
+            pm = PasswordManager()
+            password_hash, salt = pm.hash_password("N3wqroj3ctP@sS!0604")
+            
+            admin = User(
+                username="Entropic_Master",
+                email="entropicuser@gmail.com",
+                password_hash=password_hash,
+                password_salt=salt,
+                role="admin",
+                public_key="Won'tOpenWithoutPermission"
+            )
+            db.add(admin)
+            await db.commit()
+            logger.info("✅ Default admin user created: admin / Admin123!")
     # Initialize Redis
     try:
         redis_client = redis.Redis.from_url(settings.REDIS_URL, decode_responses=True)
