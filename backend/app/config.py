@@ -26,7 +26,7 @@ class Settings:
     ALLOWED_EXTENSIONS = ['.pdf', '.jpg', '.jpeg', '.png', '.txt', '.zip']
     
     # CORS
-    CORS_ORIGINS = ["http://localhost:5173", "http://localhost:3000"]
+    CORS_ORIGINS = ["https://cloak-6cxy.onrender.com", "http://localhost:5173", "http://localhost:3000"]
     
     # Rate Limiting
     RATE_LIMIT_REQUESTS = int(os.getenv("RATE_LIMIT_REQUESTS", "100"))
