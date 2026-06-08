@@ -48,8 +48,8 @@ async def lifespan(app: FastAPI):
         redis_client.ping()
         logger.info("Redis connected successfully")
     except Exception as e:
-        logger.error(f"Redis connection failed: {e}")
-        raise
+        logger.warning(f"Redis not available: {e}. Using in-memory storage.")
+        redis_client = None
     
     # Initialize JWT handler
     jwt_handler = JWTHandler(redis_client)
