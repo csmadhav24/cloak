@@ -78,7 +78,7 @@ function Upload() {
     try {
       // Get server public key
       setProgress(30);
-      const keyResponse = await fetch('http://localhost:8000/api/auth/public-key');
+      const keyResponse = await fetch('https://cloak-api-igkh.onrender.com/api/auth/public-key');
       const keyData = await keyResponse.json();
       const serverPublicKeyPem = keyData.public_key;
       
@@ -103,7 +103,7 @@ function Upload() {
       formData.append('auth_tag', encrypted.authTag);
       formData.append('sha256_hash', encrypted.hash);
 
-      const uploadResponse = await fetch('http://localhost:8000/api/files/upload', {
+      const uploadResponse = await fetch('https://cloak-api-igkh.onrender.com/api/files/upload', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData
