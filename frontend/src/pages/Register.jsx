@@ -36,7 +36,7 @@ function Register() {
     if (username.length < 3) return;
     
     try {
-      const response = await fetch(`http://localhost:8000/api/auth/check-username/${username}`);
+      const response = await fetch(`https://cloak-api-igkh.onrender.com/api/auth/check-username/${username}`);
       const data = await response.json();
       setUsernameAvailable(data.available);
       if (!data.available) {
@@ -54,7 +54,7 @@ function Register() {
     if (!validateEmailFormat(email)) return;
     
     try {
-      const response = await fetch(`http://localhost:8000/api/auth/check-email/${encodeURIComponent(email)}`);
+      const response = await fetch(`https://cloak-api-igkh.onrender.com/api/auth/check-email/${encodeURIComponent(email)}`);
       const data = await response.json();
       setEmailAvailable(data.available);
       if (!data.available) {
@@ -167,7 +167,7 @@ function Register() {
       console.log('Generating RSA key pair...');
       const publicKey = await generateRSAKeyPair();
 
-      const response = await fetch('http://localhost:8000/api/auth/register', {
+      const response = await fetch('https://cloak-api-igkh.onrender.com/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
