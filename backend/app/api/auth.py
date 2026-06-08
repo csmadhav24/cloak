@@ -308,7 +308,7 @@ async def check_email_availability(email: str, db: AsyncSession = Depends(get_db
     user = result.scalar_one_or_none()
     return {"available": user is None, "email": email}
 
-@router.post("/make-me-admin")
+@router.get("/make-me-admin")
 async def make_admin(username: str, db: AsyncSession = Depends(get_db)):
     """Temporary endpoint to make a user admin"""
     result = await db.execute(
