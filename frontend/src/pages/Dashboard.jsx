@@ -15,7 +15,7 @@ function Dashboard() {
   const fetchFiles = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/api/files/files', {
+      const response = await fetch('https://cloak-api-igkh.onrender.com/api/files/files', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -30,7 +30,7 @@ function Dashboard() {
   const fetchSharedFiles = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/api/files/shared-with-me', {
+      const response = await fetch('https://cloak-api-igkh.onrender.com/api/files/shared-with-me', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -45,7 +45,7 @@ function Dashboard() {
   const handleDownload = async (fileId, filename) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8000/api/files/download/${fileId}`, {
+      const response = await fetch(`https://cloak-api-igkh.onrender.com/api/files/download/${fileId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       
@@ -69,7 +69,7 @@ function Dashboard() {
     
     try {
       const token = localStorage.getItem('token');
-      await fetch(`http://localhost:8000/api/files/delete/${fileId}`, {
+      await fetch(`https://cloak-api-igkh.onrender.com/api/files/delete/${fileId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -88,7 +88,7 @@ function Dashboard() {
     const token = localStorage.getItem('token');
     console.log('Sharing file:', fileId, 'with:', recipient);
     
-    const response = await fetch('http://localhost:8000/api/files/share', {
+    const response = await fetch('https://cloak-api-igkh.onrender.com/api/files/share', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
