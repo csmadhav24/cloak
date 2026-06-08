@@ -43,7 +43,7 @@ function Login() {
         localStorage.setItem('token', data.access_token);
         localStorage.setItem('user', JSON.stringify(data.user));
         alert('Login successful!');
-        navigate('/dashboard');
+        window.location.href = '/dashboard';
       } else {
         // Handle specific error messages
         if (response.status === 401) {
