@@ -1,0 +1,31 @@
+# Core Framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+python-multipart>=0.0.20
+
+# Security & Authentication
+python-jose[cryptography]>=3.5.0
+passlib[bcrypt]>=1.7.4
+argon2-cffi>=25.1.0
+bcrypt>=4.3.0
+
+# Cryptography
+cryptography>=45.0.0
+
+# Database
+sqlalchemy>=2.0.40
+asyncpg>=0.30.0
+alembic>=1.15.0
+
+# Cache & Rate Limiting
+redis>=6.0.0
+slowapi>=0.1.9
+
+# Configuration & Validation
+pydantic>=2.11.0
+pydantic-settings>=2.8.0
+python-dotenv>=1.1.0
+
+# Utilities
+python-json-logger>=3.3.0
+httpx>=0.28.0
