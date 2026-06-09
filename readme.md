@@ -1,5 +1,10 @@
 # 🔒 CLOAK - Secure File Transfer System
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard">
+</p>
+
+
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Python](https://img.shields.io/badge/python-3.11+-green)
 ![React](https://img.shields.io/badge/react-18-blue)
