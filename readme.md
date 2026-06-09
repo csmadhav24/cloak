@@ -80,7 +80,7 @@ text
 
 ### Backend Setup
 
-bash
+```bash
 # Clone the repository
 git clone https://github.com/csmadhav24/Cloak.git
 cd Cloak/backend
@@ -259,6 +259,10 @@ File Upload (10MB)	~2.3 seconds
 File Download (10MB)	~1.8 seconds
 Concurrent Users	50+
 API Response Time	< 500ms
+```
+
+
+
 📸 Screenshots
 🔐 Login Page
 <p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/login.png" width="800" alt="CLOAK Login"> </p>
