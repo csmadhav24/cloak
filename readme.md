@@ -261,7 +261,28 @@ API Response Time	< 500ms
 
 
 
+## 📸 Screenshots
 
+### 🔐 Login Page
+![Login](screenshots/login.png)
+
+### 📊 Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### 📤 File Upload
+![Upload](screenshots/upload.png)
+
+### 📥 File Download
+![Download](screenshots/download.png)
+
+### ✅ Download Confirmation
+![Download Confirmation](screenshots/download2.png)
+
+### 🔗 File Sharing
+![Share](screenshots/share.png)
+
+### 👑 Admin Panel
+![Admin](screenshots/admin.png)
 
 
 
