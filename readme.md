@@ -258,6 +258,32 @@ File Upload (10MB)	~2.3 seconds
 File Download (10MB)	~1.8 seconds
 Concurrent Users	50+
 API Response Time	< 500ms
+
+
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### File Upload
+![File Upload](screenshots/upload.png)
+
+### Admin Panel
+![Admin Panel](screenshots/admin.png)
+
+### File Sharing
+![File Sharing](screenshots/share.png)
+
+### File Download
+![File Sharing](screenshots/download.png)
+![File Sharing](screenshots/download(1).png)
+
+
+
+
+
 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
