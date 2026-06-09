@@ -263,21 +263,30 @@ API Response Time	< 500ms
 
 
 
-📸 Screenshots
-🔐 Login Page
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/login.png" width="800" alt="CLOAK Login"> </p>
-📊 Dashboard
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard"> </p>
-📤 File Upload
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/upload.png" width="800" alt="CLOAK Upload"> </p>
-📥 File Download
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download.png" width="800" alt="CLOAK Download"> </p>
-✅ Download Confirmation
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download2.png" width="800" alt="CLOAK Download Confirmation"> </p>
-🔗 File Sharing
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/share.png" width="800" alt="CLOAK Share"> </p>
-👑 Admin Panel
-<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/admin.png" width="800" alt="CLOAK Admin"> </p>
+## 📸 Screenshots
+
+<div align="center">
+  <h3>🔐 Authentication</h3>
+  <img src="screenshots/login.png" width="80%" alt="Login Page">
+  
+  <h3>📊 Dashboard</h3>
+  <img src="screenshots/dashboard.png" width="80%" alt="Dashboard">
+  
+  <h3>📤 File Upload</h3>
+  <img src="screenshots/upload.png" width="80%" alt="Upload Page">
+  
+  <h3>📥 File Download</h3>
+  <img src="screenshots/download.png" width="80%" alt="Download Page">
+  <img src="screenshots/download1.png" width="80%" alt="Download Confirmation">
+  
+  <h3>🔗 File Sharing</h3>
+  <img src="screenshots/share.png" width="80%" alt="Share Feature">
+  
+  <h3>👑 Admin Panel</h3>
+  <img src="screenshots/admin.png" width="80%" alt="Admin Dashboard">
+</div>
+
+
 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
