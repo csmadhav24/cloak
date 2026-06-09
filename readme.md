@@ -268,27 +268,39 @@ API Response Time	< 500ms
 
 ## 📸 Screenshots
 
-### 🔐 Login Page
-![Login](screenshots/login.png)
+### 🔐 Login Page<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/login.png" width="800" alt="CLOAK Login">
+</p>
 
 ### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard">
+</p>
 
 ### 📤 File Upload
-![Upload](screenshots/upload.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/upload.png" width="800" alt="CLOAK upload">
+</p>
 
 ### 📥 File Download
-![Download](screenshots/download.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download.png" width="800" alt="CLOAK Download">
+</p>
 
 ### ✅ Download Confirmation
-![Download Confirmation](screenshots/download2.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download2.png" width="800" alt="CLOAK Download">
+</p>
 
 ### 🔗 File Sharing
-![Share](screenshots/share.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/share.png" width="800" alt="CLOAK Share">
+</p>
 
 ### 👑 Admin Panel
-![Admin](screenshots/admin.png)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/admin.png" width="800" alt="CLOAK Admin">
+</p>
 
 
 
