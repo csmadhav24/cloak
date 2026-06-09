@@ -261,25 +261,28 @@ API Response Time	< 500ms
 
 
 
-### Login Page
-![Login Page](screenshots/login.png)
+## 📸 Screenshots
 
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### File Upload
-![File Upload](screenshots/upload.png)
-
-### Admin Panel
-![Admin Panel](screenshots/admin.png)
-
-### File Sharing
-![File Sharing](screenshots/share.png)
-
-### File Download
-![File Sharing](screenshots/download.png)
-![File Sharing](screenshots/download(1).png)
-
+<div align="center">
+  <h3>🔐 Authentication</h3>
+  <img src="screenshots/login.png" width="80%" alt="Login Page">
+  
+  <h3>📊 Dashboard</h3>
+  <img src="screenshots/dashboard.png" width="80%" alt="Dashboard">
+  
+  <h3>📤 File Upload</h3>
+  <img src="screenshots/upload.png" width="80%" alt="Upload Page">
+  
+  <h3>📥 File Download</h3>
+  <img src="screenshots/download.png" width="80%" alt="Download Page">
+  <img src="screenshots/download1.png" width="80%" alt="Download Confirmation">
+  
+  <h3>🔗 File Sharing</h3>
+  <img src="screenshots/share.png" width="80%" alt="Share Feature">
+  
+  <h3>👑 Admin Panel</h3>
+  <img src="screenshots/admin.png" width="80%" alt="Admin Dashboard">
+</div>
 
 
 
