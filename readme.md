@@ -4,11 +4,10 @@
   <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard">
 </p>
 
-
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Python](https://img.shields.io/badge/python-3.11+-green)
 ![React](https://img.shields.io/badge/react-18-blue)
-![Security](https://img.shields.io/badge/security-AES--256--GCM-red)
+![Security](https://img.shields.io/badge/security-AES--256--GCM-brightgreen)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -33,6 +32,7 @@ text
 **CLOAK** is a production-ready, end-to-end encrypted file transfer system that ensures complete confidentiality and integrity of files during transmission and storage.
 
 ### Why CLOAK?
+
 - 🔐 **Zero-Knowledge Architecture** - Server never sees unencrypted data
 - 🚀 **Production Ready** - Deployed and working on Render.com
 - 📦 **Easy Deployment** - One-click deploy to cloud platforms
@@ -41,6 +41,7 @@ text
 ## 🚀 Features
 
 ### Core Features
+
 - 🔐 **End-to-End Encryption**: AES-256-GCM + RSA-2048
 - ✅ **Integrity Verification**: SHA-256 hashing
 - 👥 **User Authentication**: JWT with refresh tokens
@@ -48,6 +49,7 @@ text
 - 📊 **Admin Panel**: User management, statistics, audit logs
 
 ### Security Features
+
 - 🔒 **Secure Password Storage**: Argon2id hashing
 - 📝 **Audit Logging**: Complete system activity tracking
 - 🛡️ **Rate Limiting**: DDoS protection
@@ -70,12 +72,14 @@ text
 ## 📦 Installation
 
 ### Prerequisites
-```bash
-Python 3.11 or higher
-Node.js 18 or higher
-Git
-Docker (optional)
-Backend Setup
+
+- Python 3.11 or higher
+- Node.js 18 or higher
+- Git
+- Docker (optional)
+
+### Backend Setup
+
 bash
 # Clone the repository
 git clone https://github.com/csmadhav24/Cloak.git
@@ -93,23 +97,15 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Generate RSA keys (automatically on first run)
-
 # Start backend server
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 Frontend Setup
 bash
-# Open new terminal
 cd Cloak/frontend
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 Docker Setup (Optional)
 bash
-# Build and run with Docker Compose
 docker-compose up --build
 🔧 Environment Variables
 Backend (.env)
@@ -134,7 +130,7 @@ MAX_FILE_SIZE=104857600
 # CORS
 CORS_ORIGINS=http://localhost:5173,http://localhost:3000,https://your-frontend.onrender.com
 Frontend (.env)
-env
+env 
 VITE_API_URL=http://localhost:8000/api
 REACT_APP_API_URL=http://localhost:8000/api
 🎯 API Endpoints
@@ -262,48 +258,22 @@ Metric	Value
 File Upload (10MB)	~2.3 seconds
 File Download (10MB)	~1.8 seconds
 Concurrent Users	50+
-API Response Time	< 500ms ```
-
-
-
-## 📸 Screenshots
-
-### 🔐 Login Page<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/login.png" width="800" alt="CLOAK Login">
-</p>
-
-### 📊 Dashboard
-<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard">
-</p>
-
-### 📤 File Upload
-<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/upload.png" width="800" alt="CLOAK upload">
-</p>
-
-### 📥 File Download
-<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download.png" width="800" alt="CLOAK Download">
-</p>
-
-### ✅ Download Confirmation
-<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download2.png" width="800" alt="CLOAK Download">
-</p>
-
-### 🔗 File Sharing
-<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/share.png" width="800" alt="CLOAK Share">
-</p>
-
-### 👑 Admin Panel
-<p align="center">
-  <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/admin.png" width="800" alt="CLOAK Admin">
-</p>
-
-
-
+API Response Time	< 500ms
+📸 Screenshots
+🔐 Login Page
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/login.png" width="800" alt="CLOAK Login"> </p>
+📊 Dashboard
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard"> </p>
+📤 File Upload
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/upload.png" width="800" alt="CLOAK Upload"> </p>
+📥 File Download
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download.png" width="800" alt="CLOAK Download"> </p>
+✅ Download Confirmation
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/download2.png" width="800" alt="CLOAK Download Confirmation"> </p>
+🔗 File Sharing
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/share.png" width="800" alt="CLOAK Share"> </p>
+👑 Admin Panel
+<p align="center"> <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/admin.png" width="800" alt="CLOAK Admin"> </p>
 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
