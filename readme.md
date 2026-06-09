@@ -1,4 +1,4 @@
-# 🔒 CLOAK - Secure File Transfer System
+#  CLOAK - Secure File Transfer System
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/csmadhav24/Cloak/main/screenshots/dashboard.png" width="800" alt="CLOAK Dashboard">
@@ -11,7 +11,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-## 📌 Live Demo
+##  Live Demo
 
 | Service | URL | Status |
 |---------|-----|--------|
@@ -27,36 +27,36 @@ text
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **CLOAK** is a production-ready, end-to-end encrypted file transfer system that ensures complete confidentiality and integrity of files during transmission and storage.
 
 ### Why CLOAK?
 
-- 🔐 **Zero-Knowledge Architecture** - Server never sees unencrypted data
-- 🚀 **Production Ready** - Deployed and working on Render.com
-- 📦 **Easy Deployment** - One-click deploy to cloud platforms
-- 🛡️ **Enterprise Security** - Military-grade encryption standards
+-  **Zero-Knowledge Architecture** - Server never sees unencrypted data
+-  **Production Ready** - Deployed and working on Render.com
+-  **Easy Deployment** - One-click deploy to cloud platforms
+-  **Enterprise Security** - Military-grade encryption standards
 
-## 🚀 Features
+## Features
 
 ### Core Features
 
-- 🔐 **End-to-End Encryption**: AES-256-GCM + RSA-2048
-- ✅ **Integrity Verification**: SHA-256 hashing
-- 👥 **User Authentication**: JWT with refresh tokens
-- 📁 **File Sharing**: Share encrypted files with other users
-- 📊 **Admin Panel**: User management, statistics, audit logs
+-  **End-to-End Encryption**: AES-256-GCM + RSA-2048
+-  **Integrity Verification**: SHA-256 hashing
+-  **User Authentication**: JWT with refresh tokens
+-  **File Sharing**: Share encrypted files with other users
+-  **Admin Panel**: User management, statistics, audit logs
 
 ### Security Features
 
-- 🔒 **Secure Password Storage**: Argon2id hashing
-- 📝 **Audit Logging**: Complete system activity tracking
-- 🛡️ **Rate Limiting**: DDoS protection
-- 🔑 **HTTP-Only Cookies**: Secure token storage
-- 🚫 **CORS Protection**: Controlled cross-origin requests
+-  **Secure Password Storage**: Argon2id hashing
+-  **Audit Logging**: Complete system activity tracking
+-  **Rate Limiting**: DDoS protection
+-  **HTTP-Only Cookies**: Secure token storage
+-  **CORS Protection**: Controlled cross-origin requests
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Version |
 |-------|------------|---------|
@@ -69,7 +69,7 @@ text
 | **HTTP Client** | Axios | 1.6+ |
 | **UI Components** | Material-UI | 5.0+ |
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -107,7 +107,7 @@ npm run dev
 Docker Setup (Optional)
 bash
 docker-compose up --build
-🔧 Environment Variables
+ Environment Variables
 Backend (.env)
 env
 # Database
@@ -133,7 +133,7 @@ Frontend (.env)
 env 
 VITE_API_URL=http://localhost:8000/api
 REACT_APP_API_URL=http://localhost:8000/api
-🎯 API Endpoints
+ API Endpoints
 Method	Endpoint	Description	Auth
 Authentication			
 POST	/api/auth/register	User registration	❌
@@ -152,7 +152,7 @@ PUT	/api/admin/users/{id}	Update user	👑
 GET	/api/admin/stats	System statistics	👑
 Audit			
 GET	/api/audit/logs	View audit logs	👑
-🔒 Security Architecture
+ Security Architecture
 Encryption Flow
 text
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
